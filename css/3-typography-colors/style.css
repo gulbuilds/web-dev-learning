@@ -1,0 +1,76 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* CSS Variables for colors */
+:root {
+  --primary: #4f46e5;
+  --text-dark: #1e293b;
+  --bg-light: #f8fafc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1rem;
+  max-width: 65ch; /* 65 characters for readability */
+  margin-bottom: 30px;
+}
+
+.color-boxes {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.box {
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.hex { background-color: #ff5733; }
+.rgb { background-color: rgb(52, 152, 219); }
+.hsl { background-color: hsl(145, 63%, 42%); }
+.var { background-color: var(--primary); }
