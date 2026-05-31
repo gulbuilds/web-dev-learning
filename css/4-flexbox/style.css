@@ -1,0 +1,150 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  color: #1e293b;
+  background: #f8fafc;
+  line-height: 1.6;
+}
+
+/* 1. Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: #0f172a;
+  color: #f8fafc;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  gap: 30px;
+}
+
+.links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #ffffff;
+}
+
+/* 2. Hero Center Box */
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.box {
+  text-align: center;
+  color: white;
+  padding: 60px 80px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.box p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* 3. Card Row */
+.card-row {
+  display: flex;
+  gap: 30px;
+  padding: 80px 5%;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #667eea;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* 4. Footer */
+.footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-content h3 {
+  color: #f8fafc;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .box h1 {
+    font-size: 1.8rem;
+  }
+  
+  .box {
+    padding: 40px 30px;
+  }
+}

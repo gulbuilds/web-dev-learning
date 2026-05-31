@@ -4,6 +4,7 @@ h1 {
   color: dodgerblue;
 }
 
+
 /* Class selector - targets elements with class="highlight" */
 .highlight {
   background-color: lightyellow;
