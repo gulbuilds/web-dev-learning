@@ -1,0 +1,139 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f7fa;
+}
+
+/* 2. Main Grid Layout  */
+.page-layout {
+  display: grid;
+  
+  /* Columns: Sidebar fixed */
+  grid-template-columns: 250px 1fr;
+  
+  /* Rows: Header  */
+  grid-template-rows: 80px 1fr 60px;
+  
+  /* Visual map */
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+  
+  min-height: 100vh; /* Poori screen height */
+  gap: 15px; /* Boxes ke beech space */
+  padding: 15px;
+}
+
+/* 3. Header Section */
+header { 
+  grid-area: header; 
+  background: #2c3e50; 
+  color: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  
+  /* Text ko center mein lane ke liye flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+header p {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* 4. Sidebar Navigation */
+aside { 
+  grid-area: sidebar; 
+  background: #34495e; 
+  color: white;
+  padding: 25px 20px;
+  border-radius: 8px;
+}
+
+aside h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-bottom: 2px solid #4a6278;
+  padding-bottom: 10px;
+}
+
+aside ul { 
+  list-style: none; 
+}
+
+aside li { 
+  padding: 12px 0; 
+  border-bottom: 1px solid #4a6278;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+aside li:hover {
+  padding-left: 10px;
+  color: #3498db;
+}
+
+/* 5. Main Content Area */
+main { 
+  grid-area: main; 
+  background: white; 
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+main h2, main h3 { 
+  margin: 25px 0 12px; 
+  color: #2c3e50; 
+}
+
+main p { 
+  line-height: 1.8; 
+  margin-bottom: 18px; 
+  color: #555; 
+  text-align: justify;
+}
+
+/* 6. Footer */
+footer { 
+  grid-area: footer; 
+  background: #2c3e50; 
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* 7. Mobile Responsive */
+@media (max-width: 768px) {
+  .page-layout {
+    grid-template-columns: 1fr; /* Sirf 1 column */
+    grid-template-areas: 
+      "header"
+      "main" 
+      "sidebar"
+      "footer";
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  header h1 { font-size: 20px; }
+  main { padding: 20px; }
+}
