@@ -1,0 +1,36 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial; }
+
+/* === today  MAIN CONCEPT === */
+header {
+  display: flex;                  
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #1a1a1a;
+  color: white;
+  
+  /* Naya wala - Position  */
+  position: sticky;  
+  top: 0;            
+  z-index: 100;      /* Content ke upar raho */
+}
+
+nav a {
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.content {
+  padding: 40px;
+  line-height: 2;
+  font-size: 18px;
+}
