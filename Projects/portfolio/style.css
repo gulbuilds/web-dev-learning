@@ -1,0 +1,220 @@
+
+/* box-sizing: border-box prevents width calculation issues */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scroll when clicking nav links */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* justify-content: space-between pushes logo left, links right */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #333;
+  box-shadow: 0 2px 10px rgba(147, 1, 1, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f8f9fd;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  text-decoration: underline overline #f3efef;
+  color: #fdfcfc;
+  font-weight: 700;
+  transition: color 0.2s; /* Smooth color change on hover */
+}
+
+/* Pseudo-class: Hover effect for navigation */
+.nav-links a:hover {
+  color: #0e0e0e;
+}
+
+/*   HERO SECTION - Flexbox for perfect centering */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* BUTTON - Uses :hover and :active pseudo-classes */
+.btn-primary {
+  padding: 14px 32px;
+  background: white;
+  color: #1f1f22;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover: Button lifts up + shadow appears */
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(251, 249, 249, 0.2);
+}
+
+/* Active: Button presses down when clicked */
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* SKILLS SECTION - CSS Grid for layout */
+.skills {
+  padding: 80px 10%;
+  background: #f8f9fa;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Grid: Mobile first = 1 column */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+/* Hover effect on cards */
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-card h3 {
+  color: #667eea;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+/* ============================================
+   CONTACT FORM - Uses :focus and :invalid
+   ============================================ */
+.contact {
+  padding: 80px 10%;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+/* Pseudo-class: Focus state for better UX */
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Only show red border after user types something wrong */
+input:not(:placeholder-shown):invalid {
+  border-color: #ff4d4d;
+}
+
+/*  FOOTER */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - Media Queries
+   Mobile First Approach: Start small, then add breakpoints
+   ============================================ */
+
+/* Tablet: 600px and above - 2 columns for skills */
+@media (min-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero h1 {
+    font-size: 56px;
+  }
+}
+
+/* Desktop: 900px and above - 4 columns for skills */
+@media (min-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .navbar {
+    padding: 20px 15%;
+  }
+}
