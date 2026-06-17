@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+h1 {
+  color: #333;
+}
+
+/* 1. TRANSITION: Smooth change from one state to another
+   Must define 'transition' in normal state, not hover */
+.btn-transition {
+  padding: 15px 40px;
+  background: #0625b1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  
+  /* transition: what-to-animate duration timing-function */
+  transition: all 0.2s ease;
+  /* 'all' = all properties will animate smoothly */
+  /* ease = slow start, fast middle, slow end */
+}
+.btn-transition:hover {
+  background: #764ba2;
+  transform: translateY(-5px); /* Move button 5px up */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Add shadow */
+}
+
+.btn{
+      padding: 15px  40px;
+  background-color: #10b981;  
+  color: beige;
+  font-size: 17px;
+  border:none ;
+  border-radius: 5px;
+  cursor: alias;
+  transition: margin-right 2s 0.5s;
+  }
+.btn:hover{
+    background-color: olive;
+     transform: translateY(-5px);
+}
+
+/* 2. ANIMATION: Define keyframes + apply animation    */
+
+/* Step 1: Create animation blueprint with @keyframes */
+@keyframes spin {
+  /* from = 0% state */
+  from {
+    transform: rotate(0deg); /* Start at 0 degree rotation */
+  }
+  /* to = 100% state */
+  to {
+    transform: rotate(360deg); /* End at full 360 degree rotation */
+  }
+}
+
+/* Step 2: Apply animation to element */
+.box-spin {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 12px;
+  
+  /* animation: name duration timing iteration-count */
+  animation: spin 2s linear infinite;
+  /* spin = animation name from @keyframes */
+  /* 2s = one full rotation takes 2 seconds */
+  /* linear = same speed start to end */
+  /* infinite = never stop, keep rotating */
+}
+
+/* 3. BOUNCE ANIMATIOn */
+
+/* Keyframes with multiple steps using % */
+@keyframes bounce {
+ 0% { transform: translateY(0); }      /* Start position */
+ 30% { transform: translateY(-20px); } /* Go up 20px */
+ 50% { transform: translateY(0); }     /* Come back down */
+ 70% { transform: translateY(-10px); } /* Small bounce up */
+ 100% { transform: translateY(0); }    /* Final position */
+}
+
+.btn-bounce {
+  padding: 15px 40px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Apply bounce animation when button is clicked */
+.btn-bounce:active {
+  animation: bounce 0.5s ease;
+}
