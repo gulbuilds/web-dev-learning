@@ -1,0 +1,40 @@
+🚀 JavaScript Learning Journey
+
+📖 About This Folder
+ learning JavaScript — from the absolute basics to advanced concepts.
+
+🎯 Goals
+To build strong JavaScript fundamentals through daily practice.
+
+🗺️ Roadmap
+Phase	Topics
+1. Fundamentals	Variables, data types, operators, conditionals, loops, functions
+2. DOM & Browser	Selecting elements, events, manipulating the page
+3. Intermediate JS	Arrays & objects in depth, scope, closures, `this` keyword
+4. Asynchronous JS	Callbacks, Promises, async/await, Fetch API
+5. Object-Oriented JS	Classes, prototypes, inheritance
+6. Advanced Concepts	ES6+ features, error handling, modules, design patterns
+7. Projects	Small apps combining everything learned
+
+📂  Structure
+```
+javascript/
+│
+├── day-01-variables-datatypes.js
+├── day-02-operators-conditionals.js
+├── day-03-loops.js
+├── ...
+└── README.md
+```
+🚀 How to Run Code
+
+Using Node.js:
+
+node index.js
+
+
+🔗 Connect
+Feel free to follow along, suggest improvements, or point out mistakes.
+GitHub: https://github.com/gulbuilds
+
+---
